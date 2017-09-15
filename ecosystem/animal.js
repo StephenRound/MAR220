@@ -1,20 +1,23 @@
-var Object = function() {
+var Animal = function() {
   
-  this.position = createVector(random(width), random(height));
+  this.position = createVector(random(width), random(height - 100));
   this.velocity = createVector();
-  this.accel = createVector(-0.01, 0.01);
+  this.accel = createVector();
   
   this.update = function() {
+    this.accel = p5.Vector.random2D();
     this.velocity.add(this.accel);
-    this.velocity.limit(10);
+    this.velocity.limit(5);
     this.position.add(this.velocity);
     this.show();
     this.checkEdges();
   };
   
   this.show = function() {
-    stroke(0, 0, 255);
-    line(this.position.x, this.position.y, this.position.x - 2, this.position.y + 9);
+    strokeWeight(2);
+    fill(127);
+    stroke(0);
+    ellipse(this.position.x, this.position.y, 10, 10);
   };
   
   this.checkEdges = function() {
