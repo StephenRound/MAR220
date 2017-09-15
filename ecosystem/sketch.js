@@ -1,12 +1,16 @@
-var object;
+var object = [];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  object = new Object();
+  for (var i = 0; i < 20; i++) {
+    object[i] = new Object();
+  }
 }
 
 function draw() {
   background(155);
   
-  object.update();
+  for (var i = 0; i < object.length; i++) {
+    object[i].update();
+  }
 }
