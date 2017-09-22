@@ -33,10 +33,10 @@ function draw() {
   fill('white');
   //text(time, 20, 100);
   //text(time % 500, 20, 50);
-  text('height:'+ height, 20, 50);
-  text('height threshold:'+ (height - 20), 20, 100);
-  text('mouseX:'+ mouseX, 20, 150);
-  text('mouseY:' + mouseY, 20, 200);
+  //text('height:'+ height, 20, 50);
+  //text('height threshold:'+ (height - 20), 20, 100);
+  //text('mouseX:'+ mouseX, 20, 150);
+  //text('mouseY:' + mouseY, 20, 200);
   //a small debug that tells me if my variables were correct
   for (var i = 0; i < rain.length; i++) {
     var wind = createVector(-0.01, 0);
