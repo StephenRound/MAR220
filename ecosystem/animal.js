@@ -21,6 +21,8 @@ var Animal = function() {
   };
   
   this.checkEdges = function() {
+  //updated this to make sure the bugs wouldn't enter the floor and 
+  //come out of the sky. didn't make much sense for them to do that
     if (this.position.x > width) {
       this.position.x = 0;
     } else if (this.position.x < 0) {
@@ -28,9 +30,11 @@ var Animal = function() {
     }
     
     if (this.position.y > height) {
-      this.position.y = 0;
-    } else if (this.position.y < 0) {
       this.position.y = height;
+      this.velocity.y *= -1;
+    } else if (this.position.y < 0) {
+      this.position.y = 0;
+      this.velocity.y *= -1;
     }
   };
 };
