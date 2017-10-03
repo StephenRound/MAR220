@@ -4,3 +4,6 @@
 //they would snap upwards, probably to a maximum of 3/4s of the height,
 //before slowly dwindling back down to the ground.
 
+var Plant = function(x, y) {
+  
+}

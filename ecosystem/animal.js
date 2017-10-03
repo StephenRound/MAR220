@@ -3,6 +3,8 @@ var Animal = function() {
   this.position = createVector(random(width), random(height - 100));
   this.velocity = createVector();
   this.accel = createVector();
+  this.feeding = false;
+  this.feedTime = 0;
   
   this.update = function() {
     this.accel = p5.Vector.random2D();
@@ -37,4 +39,12 @@ var Animal = function() {
       this.velocity.y *= -1;
     }
   };
+  
+  // this.findFood = function(food) {
+  //   var seek = p5.Vector.sub(this.position, food.position);
+  //   var distance = seek.mag();
+  //   distance = contrain(distance, 1, 5);
+  //   seek.normalize();
+    
+  // }
 };
